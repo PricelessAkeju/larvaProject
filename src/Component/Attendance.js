@@ -45,7 +45,7 @@ const handleLogOut = () => {
 
       
   return (
-        <div className="w-[375px] lg:w-[1300px] h-full lg:h-[500px] relative bg-[#faf9f9] lg:bg-[#faf9f9]">
+        <div className="w-screen  h-screen absolute bg-[#faf9f9] lg:bg-[#faf9f9]">
           {/* Head */}
           <div className="w-[1103px] pl-6 pr-9 py-4 left-[247px] top-[1px] absolute bg-white border-b border-[#e6e6e6] justify-between items-center inline-flex">
             <div className="text-[#111111] text-xl font-semibold font-['Inter']">School Attendance</div>
@@ -96,11 +96,11 @@ const handleLogOut = () => {
       {/* Serch and Date aspect line */}
   <div className="w-[1103px] h-[215px] pl-[30px] pr-[37px] py-5 left-[247px] top-[82px] absolute border-b border-[#e6e6e6] flex-col justify-start items-start gap-[29px] inline-flex">
     <div className="self-stretch h-[91px] flex-col justify-start items-center gap-[18px] flex">
-      <div className="self-stretch text-center text-[#1a1a1a] text-lg font-semibold font-['Inter']">Mark Attendance</div>
+      <div className="self-stretch text-center text-[#1a1a1a] text-lg font-semibold font-Robot">Mark Attendance</div>
       <div className="self-stretch justify-start items-center gap-[54px] inline-flex">
         <div className="h-[15px] md:w-[] lg:h-[49px] w-[20px] md:w[] lg:w-[940px] pl-5 pr-2.5 py-4 bg-white rounded-[10px] border border-[#e9e9e9] justify-start items-center gap-2.5 flex">
           <img src={search} className="text-2xl text-[#9b9a9a] font-bold"/>
-          <input className="h-[15px] md:w-[] lg:h-[40px] w-[20px] md:w[] lg:w-[890px] text-[#181818] text-base font-medium font-['Inter'] focus:border-none outline-none" 
+          <input className="h-[15px] md:w-[] lg:h-[40px] w-[20px] md:w[] lg:w-[890px] text-[#181818] text-base font-medium font-Roboto focus:border-none outline-none" 
           type="text" 
           placeholder="Search" 
           />
