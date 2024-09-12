@@ -7,6 +7,9 @@ import { FaCaretDown } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
 import myPassport from '../IMAGES/myPassport.jpg'
 import larvaLogo from '../IMAGES/larvaLogo.svg'
+import Bulkaction from './Bulkaction';
+import Cohort from './Cohort'
+import Course from './Course'
 
 const Attendance = () => {
 
@@ -40,7 +43,12 @@ const handleLogOut = () => {
   navigate('/');
 };
 
+const [selectedComponent, setSelectedComponent] = useState(null);
 
+const handleComponentClick = (component) => {
+  setSelectedComponent(component   === selectedComponent ? null : component);
+
+};
 
 
       
@@ -114,22 +122,25 @@ const handleLogOut = () => {
           <div className="px-3.5 py-[18px] bg-white rounded shadow justify-center items-center gap-16 flex"
           onClick={() => setShowCalendar(true)}
           >
-            <p className="w-[109px] text-[#2c2c2c] text-base font-semibold font-['Inter']">Date Selector</p>
+            <p className="w-[109px] text-[#2c2c2c] text-base font-semibold font-Roboto">Date Selector</p>
             <FaCaretDown className="text-2xl text-[#cc781d] font-bold"/>
             
           </div>
           
-          <div className="px-3.5 py-[18px] bg-white rounded shadow justify-center items-center gap-16 flex">
-            <p className="text-[#2c2c2c] text-base font-semibold font-['Inter']">Select Course</p>
+          <div className="px-3.5 py-[18px] bg-white rounded shadow justify-center items-center gap-16 flex"
+          onClick={() => handleComponentClick("Course")}>
+            <p className="text-[#2c2c2c] text-base font-semibold font-Roboto">Select Course</p>
             <FaCaretDown className="text-2xl text-[#cc781d] font-bold"/>
           </div>
 
-          <div className="px-3.5 py-[18px] bg-white rounded shadow justify-center items-center gap-16 flex">
-            <p className="text-[#2c2c2c] text-base font-semibold font-['Inter']">Select Cohort</p>
+          <div className="px-3.5 py-[18px] bg-white rounded shadow justify-center items-center gap-16 flex"
+          onClick={() => handleComponentClick("Cohort")}>
+            <p className="text-[#2c2c2c] text-base font-semibold font-Roboto">Select Cohort</p>
             <FaCaretDown className="text-2xl text-[#cc781d] font-bold"/>
           </div>
-          <div className="px-3.5 py-[18px] bg-white rounded shadow justify-center items-center gap-16 flex">
-            <p className="text-[#2c2c2c] text-base font-semibold font-['Inter']">Bulk Action</p>
+          <div className="px-3.5 py-[18px] bg-white rounded shadow justify-center items-center gap-16 flex"
+          onClick={() => handleComponentClick("Bulkaction")}>
+            <p className="text-[#2c2c2c] text-base font-semibold font-Roboto">Bulk Action</p>
             <FaCaretDown className="text-2xl text-[#cc781d] font-bold"/>
           </div>
         </div>
@@ -144,6 +155,13 @@ const handleLogOut = () => {
                 />
               )}
         </span>
+
+        {selectedComponent === "Course" && <Course />}
+        {selectedComponent === "Cohort" && <Cohort />}
+        {selectedComponent === "Bulkaction" && <Bulkaction />}
+        {/* <Course />
+        <Cohort />
+        <Bulkaction /> */}
   </div>
 </div>
 
