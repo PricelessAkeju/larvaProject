@@ -59,6 +59,10 @@ const handleLogOut = () => {
   // Your login logic here
   navigate('/');
 };
+const handleDashboard = () => {
+  // Your login logic here
+  navigate('/');
+};
   return (
     <div class="w-screen h-screen relative bg-[#faf9f9]">
   <div class="w-[1193px] pl-6 pr-9 py-4 left-[247px] top-[1px] absolute bg-white border-b border-[#e6e6e6] justify-between items-center inline-flex">
@@ -74,7 +78,7 @@ const handleLogOut = () => {
      {/* ASIDE */}
      <aside className="w-[247px] pl-11 pr-16 pt-[37px] pb-[62.62px] left-0 top-0 absolute bg-white border-r border-[#e6e6e6] flex-col justify-start items-center inline-flex">
     <div className="self-stretch h-[681.38px] flex-col justify-start items-start gap-[287px] inline-flex">
-        <img className="w-[104px] h-[37.37px]" src={larvaLogo} alt="Logo"/>
+        <img className="w-[104px] h-[37.37px]" src={larvaLogo} alt="Logo" onClick={handleDashboard}/>
 
       <div className="h-[375.38px] flex-col justify-start items-start gap-[142px] font-Roboto cursor-pointer  -mt-44 lg:flex">
         <div className="self-stretch h-[196px] flex-col justify-start items-start gap-10 flex lg:flex">
